@@ -6,7 +6,7 @@ The required dataset was downloaded from [NCBI Dataset website](https://www.ncbi
 
 Brief description of the dataset:
 * 14 Complete bacterial genomes sequences as FASTA files.
-* The metadata includes GC perceatage, Genome sizes (in Mb), Contig N50, Scaffold count.
+* The metadata includes GC perceatage, Genome sizes (in Mb), Contig N50, Scaffold count (among others).
 
 
 Downloaded zip file was uploaded to the git repository which was cloned to the ibex cluster.
