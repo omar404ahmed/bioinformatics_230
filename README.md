@@ -8,8 +8,16 @@ Brief description of the dataset:
 * 14 Complete bacterial genomes sequences as FASTA files.
 * The metadata includes GC perceatage, Genome sizes (in Mb), Contig N50, Scaffold count (among others).
 
+Downloaded zip file was sent to home directory using:
 
-Downloaded zip file was uploaded to the git repository which was cloned to the ibex cluster.
+```
+<scp /Users/omar/Downloads/ncbi_dataset.zip ahmedo@ilogin.ibex.kaust.edu.sa:/home/ahmedo>
+```
+
+![Alt text](/Screenshots/send.png?raw=true)
+
+
+Downloaded zip file could also be uploaded to the git repository which can be cloned to the ibex cluster.
 
 ```
 <git clone https://github.com/omar404ahmed/bioinformatics_230>
