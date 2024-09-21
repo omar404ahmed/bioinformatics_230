@@ -15,6 +15,6 @@ Downloaded zip file was uploaded to the git repository which was cloned to the i
 <git clone https://github.com/omar404ahmed/bioinformatics_230>
 ```
 
-<!--- image clone here--->
-
+<!--- image 1 here--->
+![Alt text](/main/Screenshots/Clone.png?raw=true)
 
