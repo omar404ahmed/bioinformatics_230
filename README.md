@@ -7,6 +7,6 @@ The required dataset was downloaded from [NCBI Dataset website](https://www.ncbi
 
 Downloaded zip file was uploaded to the git repository which was cloned to the ibex cluster.
 
-'''
+```
 <git clone https://github.com/omar404ahmed/bioinformatics_230>
-'''
+```
