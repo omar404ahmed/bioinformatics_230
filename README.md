@@ -16,5 +16,5 @@ Downloaded zip file was uploaded to the git repository which was cloned to the i
 ```
 
 <!--- image 1 here--->
-![Alt text](/main/Screenshots/Clone.png?raw=true)
+![Alt text](/Screenshots/Clone.png?raw=true)
 
