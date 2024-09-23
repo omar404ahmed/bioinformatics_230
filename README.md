@@ -41,9 +41,9 @@ The smallest and largest gemone can be obtained by sorting based on the gene siz
 
 ```
 *smallest*
-tail -n+2 data_summary.tsv | cut -f 1,11 | sort -t$'\t' -n -k2 | uniq | head -n 1 >> output.txt
+tail -n+2 data_summary.tsv | cut -f 1,11 | sort -t$'\t' -n -k2 | head -n 1 >> output.txt
 *largest*
-tail -n+2 data_summary.tsv | cut -f 1,11 | sort -t$'\t' -n -k2 | uniq | tail -n 1 >> output.txt
+tail -n+2 data_summary.tsv | cut -f 1,11 | sort -t$'\t' -n -k2 | tail -n 1 >> output.txt
 ```
 
 
@@ -51,7 +51,21 @@ To output only the genome size appending ```awk '{print $NF}'``` to above pipeli
 
 ```
 *smallest*
-tail -n+2 data_summary.tsv | cut -f 1,11 | sort -t$'\t' -n -k2 | uniq | head -n 1 | awk '{print $NF}' >> output.txt
+tail -n+2 data_summary.tsv | cut -f 1,11 | sort -t$'\t' -n -k2 | head -n 1 | awk '{print $NF}' >> output.txt
 *largest*
-tail -n+2 data_summary.tsv | cut -f 1,11 | sort -t$'\t' -n -k2 | uniq | tail -n 1 | awk '{print $NF}' >> output.txt
+tail -n+2 data_summary.tsv | cut -f 1,11 | sort -t$'\t' -n -k2 | tail -n 1 | awk '{print $NF}' >> output.txt
 ```
+
+### Find number of genomes with at least two "c"
+
+For this task the regex ```'c.*c"``` gives us strings with at least two "c" in them. Using ```grep -i 'c.*c``` and ```wc -l``` in pipeline we can obtain the desired number.
+
+```tail -n+2 data_summary.tsv | cut -f 1 | grep -i 'c.*c' | wc -l >> output.txt```
+
+
+#### Find number of genomes with at least two "c" but not the word 'coccus'
+
+Using ```grep -iv 'coccus'``` with previous command allows us to ignore the word 'coccus' from the word count.
+
+```tail -n+2 data_summary.tsv | cut -f 1 | grep -i 'c.*c' | grep -iv 'coccus' | wc -l >> output.txt```
+
