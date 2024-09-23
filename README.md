@@ -26,3 +26,12 @@ Downloaded zip file could also be uploaded to the git repository which can be cl
 <!--- image 1 here--->
 ![Alt text](/Screenshots/Clone.png?raw=true)
 
+
+File can be easily decompressed using 
+
+```
+<unzip ncbi_dataset.zip>
+```
+
+### Smallest and Largest Genome
+
