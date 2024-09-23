@@ -33,5 +33,15 @@ File can be easily decompressed using
 <unzip ncbi_dataset.zip>
 ```
 
+
+
 ### Smallest and Largest Genome
 
+The smallest and largest gemone can be obtained by sorting based on the gene sizes which is column 11 in the dataframe. Using ```<head -n 1>``` and ```<tail -n 1>``` in conjuction with the pipeline we can output only the line with smallest and largest genomes respctively. The result is stored in output.txt
+
+```
+*smallest
+<tail -n+2 data_summary.tsv | cut -f 1,11 | sort -t$'\t' -n -k2 | uniq | head -n 1 > output.txt>
+*largest
+<tail -n+2 data_summary.tsv | cut -f 1,11 | sort -t$'\t' -n -k2 | uniq | tail -n 1 > output.txt>
+```
