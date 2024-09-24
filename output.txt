@@ -36,6 +36,6 @@ Chlamydia trachomatis D/UW-3/CX	1042519
 Vibrio cholerae O1 biovar El Tor str. N16961	4033464
 1042519
 4033464
-14
 10
+8
 6
