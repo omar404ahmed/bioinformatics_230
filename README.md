@@ -79,4 +79,4 @@ Using ```find``` command tests, namely ```name``` and ```size```, we can achieve
 
 ### The results of all commands were appended to a file titled 'output.txt'.
 
-The file output.txt was added to the cloned repository and then commited and push to main.
+The file output.txt was added to the cloned repository and then commited and pushed to main.
