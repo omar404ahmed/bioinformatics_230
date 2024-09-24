@@ -69,3 +69,14 @@ Using ```grep -iv 'coccus'``` with previous command allows us to ignore the word
 
 ```tail -n+2 data_summary.tsv | cut -f 1 | grep -i 'c.*c' | grep -iv 'coccus' | wc -l >> output.txt```
 
+
+### Fing .fna files greater than 3MB
+
+Using ```find``` command tests, namely ```name``` and ```size```, we can achieve the task at hand.
+
+```find -name '*.fna' -size +3M | wc -l >> output.txt```
+
+
+### The results of all commands were appended to a file titled 'output.txt'.
+
+The file output.txt was added to the cloned repository and then commited and push to main.
