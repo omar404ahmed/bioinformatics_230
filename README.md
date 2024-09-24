@@ -60,14 +60,14 @@ tail -n+2 data_summary.tsv | cut -f 1,11 | sort -t$'\t' -n -k2 | tail -n 1 | awk
 
 For this task the regex ```'c.*c"``` gives us strings with at least two "c" in them. Using ```grep -i 'c.*c``` and ```wc -l``` in pipeline we can obtain the desired number.
 
-```tail -n+2 data_summary.tsv | cut -f 1 | grep -i 'c.*c' | wc -l >> output.txt```
+```tail -n+2 data_summary.tsv | cut -f 1 | grep -c 'c.*c' >> output.txt```
 
 
 #### Find number of genomes with at least two "c" but not the word 'coccus'
 
 Using ```grep -iv 'coccus'``` with previous command allows us to ignore the word 'coccus' from the word count.
 
-```tail -n+2 data_summary.tsv | cut -f 1 | grep -i 'c.*c' | grep -iv 'coccus' | wc -l >> output.txt```
+```tail -n+2 data_summary.tsv | cut -f 1 | grep -o 'c.*c' | grep -cv 'coccus' >> output.txt```
 
 
 ### Fing .fna files greater than 3MB
