@@ -1,5 +1,11 @@
 # Bioinformatics_230
 This repository contains notebooks and submissions for the couse Foundations of Bioengineering Lab
+
+
+## Week 4 : Gene Finder
+The Gene Finder is implemented in this [repository](https://github.com/omar404ahmed/gene_finder)
+
+
 ## Week 3 : Data Wrangling
 
 The required dataset was downloaded from [NCBI Dataset website](https://www.ncbi.nlm.nih.gov/datasets/genome/?taxon=2&assembly_level=3:3&release_year=1980:2001).
