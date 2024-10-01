@@ -57,7 +57,21 @@ The output of [prokka_script.sh](prokka_script.sh) are [prokka_cds_counts.txt](p
 
 ### Extract and list all unique gene names annotated by Prokka
 
+```
+grep "Name=" prokka_results/*/*.gff | cut -f9 | cut -d ';' -f3 | cut -d '=' -f2 | sort | uniq > unique_gene_names.txt
+```
 
+```
+head -n 5 unique_gene_names.txt
+
+*OUTPUT*
+aaaT
+aaeA
+aaeA_1
+aaeB
+AAH1
+```
+[unique_gene_names.txt](unique_gene_names.txt)
 
 ## Week 4 : Gene Finder
 The Gene Finder is implemented in this [repository](https://github.com/omar404ahmed/gene_finder)
