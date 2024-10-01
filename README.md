@@ -29,9 +29,49 @@ NUmber of bases in ORF: 93
 ml load prodigal
 prodigal -i e.coli_genome.fna -o e.coli.gbk -d e.coli_genes.faa
 grep ">" e.coli_genes.fna -c > gene_count.txt
+```
+[gene_count_e.coli](gene_count.txt)
+
+### Script to run Prodigal on downloaded genomes
 
 ```
+nano prodigal_script.sh
+bash ./prodigal_script.sh
+```
+The output of the script is [prodigal_results.txt](prodigal_results.txt) which contains the genome filename with highest number of genes.
 
+
+## Prokka
+
+### Annotate all downloaded genomes using Prokka
+
+```
+nano prokka_script.sh
+bash ./prokka_script.sh
+```
+The output of [prokka_script.sh](prokka_script.sh) are [prokka_cds_counts.txt](prokka_cds_counts.txt) and [prokka_final_result.txt](prokka_final_result.txt).
+
+
+#### We observe that the highest gene count found by Prokka and Prodigal are different (3589 and 3594 respectively). This can be attributed to the different filters used by both tools. However, it is of note that the values differ by just 0.14%.
+
+
+### Extract and list all unique gene names annotated by Prokka
+
+```
+grep "Name=" prokka_results/*/*.gff | cut -f9 | cut -d ';' -f3 | cut -d '=' -f2 | sort | uniq > unique_gene_names.txt
+```
+
+```
+head -n 5 unique_gene_names.txt
+
+*OUTPUT*
+aaaT
+aaeA
+aaeA_1
+aaeB
+AAH1
+```
+[unique_gene_names.txt](unique_gene_names.txt)
 
 ## Week 4 : Gene Finder
 The Gene Finder is implemented in this [repository](https://github.com/omar404ahmed/gene_finder)
