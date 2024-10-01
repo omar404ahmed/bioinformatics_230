@@ -29,21 +29,40 @@ NUmber of bases in ORF: 93
 ml load prodigal
 prodigal -i e.coli_genome.fna -o e.coli.gbk -d e.coli_genes.faa
 grep ">" e.coli_genes.fna -c > gene_count.txt
-
 ```
+[gene_count.txt](gene_count_e.coli)
 
 ### Script to run Prodigal on downloaded genomes
 
 ```
 nano prodigal_script.sh
-chmod +x prodigal_script.sh
 bash ./prodigal_script.sh
-
 ```
-The output is in [this file](prodigal_results.txt)
+The output of the script is [this file](prodigal_results.txt) which contains the genome filename with highest number of genes.
 
 
 ## Prokka
+
+### Annotate all downloaded genomes using Prokka
+
+```
+nano prokka_script.sh
+bash ./prokka_script.sh
+```
+The output of [prokka_script.sh](prokka_script.sh) are [prokka_cds_counts.txt](prokka_cds_counts.txt) and [prokka_final_result.txt](prokka_final_result.txt).
+
+
+#### We observe that the highest gene count found by Prokka and Prodigal are different (3589 and 3594 respectively). This can be attributed to the different filters used by both tools. However, it is of note that the values differ by just 0.14%.
+
+
+### Extract and list all unique gene names annotated by Prokka
+
+
+
+
+
+
+
 
 ## Annotate all 
 
