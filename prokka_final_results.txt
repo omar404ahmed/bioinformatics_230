@@ -1,0 +1,3 @@
+Genome with the highest number of CDS (Prokka):
+File: /home/ahmedo/ncbi_dataset/data/GCF_000006745.1/GCF_000006745.1_ASM674v1_genomic.fna
+Number of CDS: 3589
