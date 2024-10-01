@@ -22,6 +22,15 @@ Number of amino acids: 30
 NUmber of bases in ORF: 93
 ```
 
+## Prodigal
+### Running Prodigal on e.coli_genome.fna
+
+```
+ml load prodigal
+prodigal -i e.coli_genome.fna -o e.coli.gbk -d e.coli_genes.faa
+grep ">" e.coli_genes.fna -c > gene_count.txt
+
+```
 
 
 ## Week 4 : Gene Finder
