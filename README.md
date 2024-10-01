@@ -3,6 +3,25 @@ This repository contains notebooks and submissions for the couse Foundations of 
 
 ## Week 5 : Genome Annotation
 
+The final week of the Bioinformatics module deals with bash scripts and Genome Annotation tools like Prokka and Prodigal.
+
+### Count number of AA and Bases for a given sequence
+
+```
+given_aa = "KVRMFTSELDIMLSVNGPADQIKYFCRHWT*"
+
+len_aa = len(given_aa) - 1 # -1 to exclude stop codon *
+
+number_bases = (len(given_aa)) * 3
+
+print(f"Number of amino acids: {len_aa}")
+print(f"Number of bases in ORF: {number_bases}")
+
+*OUTPUT*
+Number of amino acids: 30
+NUmber of bases in ORF: 93
+```
+
 
 
 ## Week 4 : Gene Finder
