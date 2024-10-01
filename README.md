@@ -38,7 +38,7 @@ grep ">" e.coli_genes.fna -c > gene_count.txt
 nano prodigal_script.sh
 bash ./prodigal_script.sh
 ```
-The output of the script [prodigal_script.sh][prodigal_script.sh] is [prodigal_results.txt](prodigal_results.txt) which contains the genome filename with highest number of genes.
+The output of the script [prodigal_script.sh](prodigal_script.sh) is [prodigal_results.txt](prodigal_results.txt) which contains the genome filename with highest number of genes.
 
 
 ## Prokka
