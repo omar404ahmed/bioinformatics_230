@@ -30,7 +30,7 @@ ml load prodigal
 prodigal -i e.coli_genome.fna -o e.coli.gbk -d e.coli_genes.faa
 grep ">" e.coli_genes.fna -c > gene_count.txt
 ```
-[gene_count.txt](gene_count_e.coli)
+[gene_count_e.coli](gene_count.txt)
 
 ### Script to run Prodigal on downloaded genomes
 
@@ -38,7 +38,7 @@ grep ">" e.coli_genes.fna -c > gene_count.txt
 nano prodigal_script.sh
 bash ./prodigal_script.sh
 ```
-The output of the script is [this file](prodigal_results.txt) which contains the genome filename with highest number of genes.
+The output of the script is [prodigal_results.txt](prodigal_results.txt) which contains the genome filename with highest number of genes.
 
 
 ## Prokka
@@ -57,14 +57,6 @@ The output of [prokka_script.sh](prokka_script.sh) are [prokka_cds_counts.txt](p
 
 ### Extract and list all unique gene names annotated by Prokka
 
-
-
-
-
-
-
-
-## Annotate all 
 
 
 ## Week 4 : Gene Finder
