@@ -32,6 +32,21 @@ grep ">" e.coli_genes.fna -c > gene_count.txt
 
 ```
 
+### Script to run Prodigal on downloaded genomes
+
+```
+nano prodigal_script.sh
+chmod +x prodigal_script.sh
+bash ./prodigal_script.sh
+
+```
+The output is in [this file](prodigal_results.txt)
+
+
+## Prokka
+
+## Annotate all 
+
 
 ## Week 4 : Gene Finder
 The Gene Finder is implemented in this [repository](https://github.com/omar404ahmed/gene_finder)
