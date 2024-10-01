@@ -77,7 +77,9 @@ AAH1
 ## Bonus Question - Find CRISPR Arrays
 
 The task was to identify CRISPR arrays in the downloaded bacterial genomes. For this, my tool of choice was CRISPRCasFinder.
+
 I used singularity to load CRISPRCasFinder container and executed [CasFinder.sh](CasFinder.sh) script. The script uses ```find``` to run CRISPRCasFinder container using singularity on the bacterial genomes. The results were printed using [get_results.sh](get_results.sh) script.
+
 The results were also compared to Prokka as Prokka also finds CRISPR arrays, however that is not its main purpose. Below image contains a summary of results of this endeavour.
 
 ![Alt text](/Screenshots/bonus.png?raw=true)
